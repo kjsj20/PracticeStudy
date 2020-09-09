@@ -40,20 +40,36 @@ title.innerHTML = "hi js";
 document.title = " I own you now";
 
 function handleClcik() {
-    // console.log("I have been resized");
-    title.style.color = 'yellow';
+    const currentColor = title.style.color;
+    if (currentColor === BASE_COLOR){
+        title.style.color = OTHER_COLOR;
+    } else {
+        title.style.color = BASE_COLOR;
+    }
+    console.log(currentColor);
+}
+
+
+// const age = prompt("How old are you");
+
+const BASE_COLOR = "rgb(52, 73, 94)";
+const OTHER_COLOR = "#7f8c8d";
+
+function init(){
+    title.style.color = BASE_COLOR;
 }
 
 title.addEventListener("click", handleClcik);
 
-const age = prompt("How old are you");
+init();
 
-if(age > 18 && age <= 21) {
-    console.log("you can drink but you should not");
-} else if (age > 21) {
-    console.log("go ahed");
-} else {
-    console.log("to young");
+function handleOffline(){
+    console.log('bye bye');
 }
 
-// console.log(age);
+function handleOnline(){
+    console.log("Welcome back");
+}
+
+window.addEventListener("offline", handleOffline);
+window.addEventListener("online", handleOnline);
