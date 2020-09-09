@@ -20,4 +20,12 @@ const jsInfo = {
         }
     ]
 } //Object
-console.log(jsInfo.favFood[0].name);
+
+// console.log(jsInfo, console);
+
+function sayHello(potato, chicken){
+    console.log('Hello!', potato, chicken);
+}
+
+sayHello("js", 15);
+console.log()

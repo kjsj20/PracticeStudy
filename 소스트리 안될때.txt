@@ -1,4 +1,4 @@
-Sourcetree ㅇ친증정보를 삭제해야한다
+Sourcetree 인증정보를 삭제해야한다
 C:\Users\user\AppData\Local|atlassian\SourceTree 폴더에서
 passwd, userhosts 파일에 저장된 id, 비밀번호를 전부 삭제한다.
 sourcetree를 재시작하고 push하면 id, pass를 입력하라는 창이 다시 뜬다.
