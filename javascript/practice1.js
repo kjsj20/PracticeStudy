@@ -1,3 +1,70 @@
+// var  what = "jaesung";
+// console.log(what);
+// var what = true;
+// console.log(what);
+// var what = 666;
+// console.log(what);
+// var what = 6.66;
+// console.log(what);
+// const arrprac = ["js", 26, true , 'Seoul'];
+// console.log(arrprac[3]);
+// const jsInfo = {
+//     name : "js",
+//     age : 26,
+//     gender : "M",
+//     isHandsome: true,
+//     favMovies: [
+//         "Avengers", "Iron Man", "Captain America"
+//     ]
+// }
+// console.log(jsInfo.name,jsInfo.age, jsInfo.gender,jsInfo.isHandsome,jsInfo.favMovies[2]);
+// // console.log(jsInfo, console);
+// console.log(sayHello(`js`,`26`));
+// function sayHello(name, age){
+//     return `Hello ${name} 
+//     you are ${age} years old`
+// }
+
+// const calculator = {
+//     plus : function(a,b){
+//         return a + b;
+//     }
+// }
+
+// const plus = calculator.plus(5,3);
+// console.log(`plus : ${plus}`)
+
+// const title = document.querySelector("#title");
+
+// const BASE_COLOR = "rgb(52, 73, 94)";
+// const OTHER_COLOR =  "#7f8c8d";
+
+// function handleClick() {
+//     const currentColor = title.style.color;
+//     if (currentColor === BASE_COLOR){
+//         title.style.color = OTHER_COLOR;
+//     } else {
+//         title.style.color = BASE_COLOR;
+//     }
+//     // console.log(currentColor);
+// }
+
+// function init(){
+//     title.style.color = BASE_COLOR;
+//     title.addEventListener("click", handleClick);
+// }
+
+// title.addEventListener("click", handleClick);
+
+// init();
+
+// const clickClass = "clicked"
+
+
+
+
+// ============================
+
 // String const what = "jaesung";
 // console.log(what);
 // Boolean const what = false;
