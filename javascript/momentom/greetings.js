@@ -32,8 +32,10 @@ function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
     if(currentUser === null){
         askForName();
+        document.querySelector("#toDo").style.display = "none";
     } else {
         paintGreeting(currentUser);
+        document.querySelector("#toDo").style.display = "block";
     }
 }
 
