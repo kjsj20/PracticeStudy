@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    text-align: center;
+}
+#wrapper{
+    position: relative;
+    background: greenyellow;
+    display:inline-block;
+}
+
+#left{
+    position: relative;
+}
+
+#top{
+    position: relative;
+}
