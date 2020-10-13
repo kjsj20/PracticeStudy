@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+  }
+  
+h1{
+    font-size: 40px;
+}
+
+#task{
+    margin-bottom : 25px;
+}
+
+.title_div{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.title_div li{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title_div li button{
+    margin-left : 5px;
+}
