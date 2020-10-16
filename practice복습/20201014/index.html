@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //버튼 클릭 이벤트 구현
+        $(function(){
+            $("form button").on("click", function(){
+                checkValue();
+            });
+        });
+
+        // 로그인 유효성 체크 함수
+        function checkValue(){
+            if($("form input[name='id']").val()===""){
+                alert("아이디를 입력해 주세요....");
+            } else if ($("form input[name = 'password']").val()===""){
+                alert("패스워드를 입력해 주세요...")
+            } else {
+                $("form").attr({
+                    action: "/login",
+                    method: "get"
+                });
+                $("form").submit(); //전송!!
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" name = "id" placeholder="아이디 입력"/>
+        <input type="text" name = "password" placeholder="비밀번호 입력"/>
+        <button type = "button">Login</button>
+    </form>
+</body>
+</html>
