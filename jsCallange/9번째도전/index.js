@@ -3,43 +3,52 @@ let textNum = document.querySelector("input");
 let currentVal = 0;
 let lastVal = 0;
 let operflag = 0;
-let oper;
-function btnNumClick(val){
-    
-    if(parseInt(textNum.value) === 0 || operflag === 1){
-        textNum.value = "";
-        operflag = 0;
-    }
-    textNum.value += val;
-    currentVal = parseInt(textNum.value);
+let valflag = 0;
+let oper1, oper2;
+function btnNumClick(val) {
+  if (parseFloat(textNum.value) === 0 || operflag === 1) {
+    textNum.value = "";
+    operflag = 0;
+  }
+  textNum.value += val;
+  currentVal = parseFloat(textNum.value);
 }
 
-function btnOperator(val){
-    // currentVal = textNum.value;
-    oper = val;
-    lastVal = parseInt(textNum.value);
-    operflag = 1;
+function btnOperator(val) {
+  // currentVal = textNum.value;
+  oper1 = val;
+  if (valflag === 0) {
+    lastVal = parseFloat(textNum.value);
+    valflag = 1;
+  } else {
+    btnEqual(1);
+  }
+  oper2 = val;
+  currentVal = 0;
+  operflag = 1;
 }
 
-function btnEqual(){
-    if(oper === "+"){
-        textNum.value = parseInt(lastVal) + parseInt(currentVal);
-    } else if (oper === "-"){
-        textNum.value = parseInt(lastVal) - parseInt(currentVal);  
-    } else if (oper === "*"){
-        textNum.value = parseInt(lastVal) * parseInt(currentVal);  
-    } else if (oper === "/"){
-        textNum.value = parseInt(lastVal) / parseInt(currentVal);  
-    } 
-}
-
-function btnCancelClick(){
+function btnEqual(flag) {
+  if (
+    currentVal !== 0 &&
+    (oper2 === "+" || oper2 === "-" || oper2 === "*" || oper2 === "/")
+  ) {
+    textNum.value = eval(parseFloat(lastVal) + oper2 + parseFloat(currentVal));
+    lastVal = parseFloat(textNum.value);
     currentVal = 0;
-    textNum.value = currentVal;
+    oper2 = "";
+    valflag = flag;
+  }
 }
 
-function init(){
-
+function btnCancelClick() {
+  currentVal = 0;
+  lastVal = 0;
+  operflag = 0;
+  valflag = 0;
+  textNum.value = currentVal;
 }
+
+function init() {}
 
 init();
