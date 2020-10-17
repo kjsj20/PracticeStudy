@@ -1,5 +1,6 @@
-const weather = document.querySelector(".js-Weather");
-
+const weather = document.querySelector(".js-Weather"),
+        temp = document.querySelector("#temp"),
+        currCity = document.querySelector("#currCity");
 const API_KEY = "68f50c75546e6a750daa4ee528cdf259";
 const COORDS = 'coords';
 
@@ -7,9 +8,32 @@ function getWeather(lat, lng){
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`).then(function(response){
         return response.json();
     }).then(function(json){
+        console.log(json);
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperature} @ ${place}`;
+        const icon = (json.weather[0].icon).substr(0,2);
+        // const img = document.createElement("img");
+        // img.style.width = 75+ "px";
+        // img.style.height = 75 + "px";
+        // const img = "<img width = '75px' height = '70px' src = http://openweathermap.org/img/wn/" + icon + "@2x.png>" + "</img>";
+        
+        let weathericon = {
+            '01' : 'fas fa-sun',
+            '02' : 'fas fa-cloud-sun',
+            '03' : 'fas fa-cloud',
+            '04' : 'fas fa-cloud-meatball',
+            '09' : 'fas fa-cloud-sun-rain',
+            '10' : 'fas fa-cloud-showers-heavy',
+            '11' : 'fas fa-poo-storm',
+            '13' : 'fas fa-snowflake',
+            '50' : 'fas fa-smog',
+        }
+
+        const img = "<i class='weatherIcon " + weathericon[icon]  +"'></i>";
+        temp.innerHTML = `${img} ${temperature.toFixed(1)}º`;
+        currCity.innerText = `${place}`
+        // weather.innerHTML = `${img} ${temperature.toFixed(1)} ºC <br> @${place} `;
+        // weather.appendChild(img);
     })
 }
 

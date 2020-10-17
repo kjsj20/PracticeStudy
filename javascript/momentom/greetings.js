@@ -15,6 +15,7 @@ function handleSubmit(event){
     const currentValue = input.value;
     paintGreeting(currentValue);
     saveName(currentValue);
+    loadName();
 }
 
 function askForName(){
@@ -35,7 +36,7 @@ function loadName(){
         document.querySelector("#toDo").style.display = "none";
     } else {
         paintGreeting(currentUser);
-        document.querySelector("#toDo").style.display = "block";
+        document.querySelector("#toDo").style.display = "inline";
     }
 }
 

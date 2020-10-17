@@ -18,9 +18,14 @@ function genRandom(){
     return number; 
 }
 
+function bodyFont(){
+    body.style.fontFamily = "sdafas" + "," + "Forte";    
+}
+
 function init(){
     const randomNumber = genRandom();
     paintImage(randomNumber);
+    bodyFont();
 }
 
 init();

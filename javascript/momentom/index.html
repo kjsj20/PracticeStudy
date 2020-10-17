@@ -3,28 +3,40 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>시계</title>
+        <title>momentum</title>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-
-        <div class="js-clock">
-            <h1>00:00</h1>
+        <div id = "weather">
+            <span class ="js-Weather">
+                <div id="temp"></div>
+                <div id="currCity"></div>
+            </span>
         </div>
 
-        <form class = "js-form form" action="" >
-            <input type="text" placeholder = "what is your name?" class = "txtStyle">
-        </form>
+        <div id="wrap">
+            <div class="js-clock">
+                <h1>00:00</h1>
+            </div>
+    
+            <form class = "js-form form" action="" >
+                <div class="form__group field"></div>
+                    <input type="text" placeholder = "what is your name?" class = "form__field" required>
+                <div></div>
+            </form>
+    
+            <h4 class = "js-greetings greetings"></h4>
+    
+            <form class="js-toDoForm">
+                <div class="form__group field"></div>
+                    <input type="text" class = "form__field" placeholder="Write a to do" id="toDo" required>
+                <div></div>
+            </form>
 
-        <h4 class = "js-greetings greetings"></h4>
-
-        <form class="js-toDoForm">
-            <input type="text" placeholder="Write a to do" id="toDo">
-        </form>
-
-        <ul class = "js-toDoList">
-        </ul>
-        <span class ="js-Weather"></span>
+            <ul class = "js-toDoList">
+            </ul>
+        </div>
+        <script src="https://kit.fontawesome.com/cefa9c60f5.js" crossorigin="anonymous"></script>
         <script src="clock.js"></script>
         <script src="greetings.js"></script>
         <script src="todo.js"></script>
