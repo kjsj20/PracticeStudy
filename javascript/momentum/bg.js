@@ -5,9 +5,9 @@ let image;
 let prevNum = 0;
 const IMG_NUMBER = 10;
 
-function handleImgLoad(){
-    console.log("finished loading")
-}
+// function handleImgLoad(){
+//     console.log("finished loading")
+// }
 
 function paintImage(imgNumber){
     image = new Image();
@@ -46,7 +46,6 @@ function removeImage(){
 }
 
 function playPhotoClick(){
-    console.log(btn.innerText);
     if(btn.innerText === "▶"){
         btn.innerText = "■"
         cgTime = setInterval("playPhoto()", 5000);
