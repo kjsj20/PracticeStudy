@@ -5,9 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>momentum</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="selectBox.css">
     </head>
     <body>
+            
+
         <div id = "weather">
+            <div class="select">
+                <select id="selectFont">
+                    <option value="">Select Font!</option>
+                    <option value="한컴 고딕">한컴 고딕</option> 
+                    <option value="휴먼엑스포">휴먼엑스포</option> 
+                    <option value="Forte">Forte</option> 
+                    <option value="Ravie">Ravie</option> 
+                </select>
+            </div>
             <span class ="js-Weather">
                 <div id="temp"></div>
                 <div id="currCity"></div>
@@ -37,10 +49,14 @@
             </ul>
         </div>
         <script src="https://kit.fontawesome.com/cefa9c60f5.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <script src="clock.js"></script>
         <script src="greetings.js"></script>
         <script src="todo.js"></script>
         <script src="bg.js"></script>
         <script src="weather.js"></script>
+        <script src="font.js"></script>
+        <!-- <script src="selectBox.js"></script> -->
     </body>
 </html>

@@ -18,14 +18,14 @@ function genRandom(){
     return number; 
 }
 
-function bodyFont(){
-    body.style.fontFamily = "sdafas" + "," + "Forte";    
-}
+// function bodyFont(){
+//     body.style.fontFamily = "sdafas" + "," + "";    
+// }
 
 function init(){
     const randomNumber = genRandom();
     paintImage(randomNumber);
-    bodyFont();
+    // bodyFont();
 }
 
 init();

@@ -51,10 +51,6 @@ h4{
     font-size : 40px;
 }
 
-/* .weatherIcon{
-    font-size: 35px;
-} */
-
 #temp{
     font-size: 30px;
 }
@@ -64,6 +60,7 @@ h4{
 }
 
 #weather{
+    position: relative;
     width: 100%;
     color : white;
     display: inline-block;
@@ -71,10 +68,11 @@ h4{
 
 .js-Weather{
     float: right;
-    /* margin-left : 30%; */
-    /* color : #ffffff; */
 }
 
+.select{
+    float: left;
+}
 .js-toDoList li{
     color: #ffffff;
 }
