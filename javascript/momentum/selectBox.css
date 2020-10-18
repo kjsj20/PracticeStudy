@@ -41,7 +41,7 @@ select {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0 1em;
+    padding: 0 0.5em;
     /* border-left : 1px solid white; */
     background: transparent;
     cursor: pointer;
@@ -52,6 +52,6 @@ select {
   }
   /* Transition */
   .select:hover::after {
-    color: #33b801;
+    color: #3d5ffc;
   }
   
