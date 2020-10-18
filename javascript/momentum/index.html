@@ -10,16 +10,21 @@
     <body>
             
 
-        <div id = "weather">
+        <div id = "head">
             <div class="select">
                 <select id="selectFont">
                     <option value="">Select Font!</option>
                     <option value="한컴 고딕">한컴 고딕</option> 
                     <option value="휴먼엑스포">휴먼엑스포</option> 
                     <option value="Forte">Forte</option> 
-                    <option value="Ravie">Ravie</option> 
+                    <option value="휴먼편지체">휴먼편지체</option> 
+                    <option value="Mistral">Mistral</option> 
+                    <option value="Footlight MT">Footlight</option> 
                 </select>
             </div>
+
+            <button onclick="playPhotoClick()">▶</button>
+
             <span class ="js-Weather">
                 <div id="temp"></div>
                 <div id="currCity"></div>
@@ -39,14 +44,21 @@
     
             <h4 class = "js-greetings greetings"></h4>
     
-            <form class="js-toDoForm">
+            <form id = "toDoForm" class="js-toDoForm">
                 <div class="form__group field"></div>
                     <input type="text" class = "form__field" placeholder="Write a to do" id="toDo" required>
                 <div></div>
             </form>
 
-            <ul class = "js-toDoList">
-            </ul>
+            <div id="pending" class="title_div">
+                TodayList
+                <ul  id="pendingList" class = "ultraList"></ul>
+            </div>
+            <div id="Finished" class="title_div">
+                Complete!
+                <ul id="finishedList" class = "ultraList"></ul>
+            </div>
+
         </div>
         <script src="https://kit.fontawesome.com/cefa9c60f5.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

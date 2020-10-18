@@ -1,21 +1,29 @@
 const body =  document.querySelector("body");
-
-const IMG_NUMBER = 5;
+const btn = document.querySelector("#head button");
+let cgTime;
+let image;
+let prevNum = 0;
+const IMG_NUMBER = 10;
 
 function handleImgLoad(){
     console.log("finished loading")
 }
 
 function paintImage(imgNumber){
-    const image = new Image();
+    image = new Image();
     image.src = `images/${imgNumber + 1}.jpg`
     image.classList.add("bgImage");
     body.appendChild(image);
 }
 
 function genRandom(){
-    const number = Math.floor(Math.random() * IMG_NUMBER);
-    return number; 
+    let number = Math.floor(Math.random() * IMG_NUMBER);
+    if(number === prevNum){
+        console.log(number);
+        number = number + 1;
+    }
+    prevNum = number;
+    return number;
 }
 
 // function bodyFont(){
@@ -25,7 +33,27 @@ function genRandom(){
 function init(){
     const randomNumber = genRandom();
     paintImage(randomNumber);
-    // bodyFont();
+}
+
+function playPhoto(){
+    removeImage();
+    const randomNumber = genRandom();
+    paintImage(randomNumber);
+}
+
+function removeImage(){
+    body.removeChild(image);
+}
+
+function playPhotoClick(){
+    console.log(btn.innerText);
+    if(btn.innerText === "▶"){
+        btn.innerText = "■"
+        cgTime = setInterval("playPhoto()", 5000);
+    } else {
+        btn.innerText = "▶"
+        clearInterval(cgTime);
+    }
 }
 
 init();

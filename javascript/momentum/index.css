@@ -1,6 +1,7 @@
 body {
     background-color: #2c3e50;
     text-align : center;
+    overflow: hidden;
 }
 
 #wrap{
@@ -23,7 +24,7 @@ body {
         opacity: 0;
     }
     to{
-        opacity: 0.6;
+        opacity: 0.8;
     }
 }
 
@@ -35,7 +36,7 @@ body {
     height: 100%;
     z-index: -1;
     animation: fadeIn 1s linear;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 h1{
@@ -51,6 +52,18 @@ h4{
     font-size : 40px;
 }
 
+#pending{
+    width: 225px;
+    float: left;
+    /* text-align: left; */
+}
+
+#Finished{
+    width: 225px;
+    float: left;    
+    /* text-align: left; */
+}
+
 #temp{
     font-size: 30px;
 }
@@ -59,11 +72,28 @@ h4{
     font-size: 12px;
 }
 
-#weather{
+#head{
     position: relative;
     width: 100%;
     color : white;
     display: inline-block;
+}
+
+#head button{
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-left: 0.5%;
+    background: transparent;
+    color : white;
+    border: 2px solid white;
+    border-radius: 25%;
+    outline: 0;
+    /* outline: none; */
+}
+
+#head button:hover{
+    background: #393ee8;
 }
 
 .js-Weather{
@@ -73,8 +103,40 @@ h4{
 .select{
     float: left;
 }
-.js-toDoList li{
-    color: #ffffff;
+
+.ultraList{
+    /* opacity: 0.6; */
+    /* float: left; */
+    font-size: 14px;
+}
+
+.title_div{
+    margin-top: 3%;
+    font-size: 20px;
+    color : white;
+}
+
+.ultraList li {
+    color : white;
+    list-style : none;
+    margin: 0;
+}
+
+.ultraList li button{
+    background-color: transparent;
+    background-image: none !important;
+    border-color: transparent;
+    /* border: none; */
+    border: 1px solid white;
+    /* border-left : 2px solid white; */
+    color: #FFFFFF;
+    margin-top: 1%;
+    margin-left: 2%;
+    box-sizing: border-box;
+}
+
+.ultraList li button:hover{
+    background: #393ee8;
 }
 
 .form__group {
