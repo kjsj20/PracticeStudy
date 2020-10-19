@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <style>
+        table{
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        td,
+        th{
+            text-align : left;
+            padding : 16px;
+        }
+
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        .btnWrite{
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btnWrite:hover{
+            background-color: #45a049;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                location.href = "registForm.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>No</td>
+            <th>제목</td>
+            <th>작성자</td>
+            <th>등록일</td>
+            <th>조회수</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="detail.html">다음주도 비대면...</a></td>
+            <td>노동부</td>
+            <td>2020-10-20</td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <button class = "btnWrite">글쓰기</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
